@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 declare const Apiomat;
 
@@ -11,7 +12,7 @@ export class LoginPageComponent implements OnInit {
   public username;
   public password;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
@@ -27,6 +28,13 @@ export class LoginPageComponent implements OnInit {
     client.setPassword(this.password);
 
     Apiomat.Datastore.configureWithCredentials(client);
+
+    client.loadMe({
+      onOk: () => this.router.navigate(['offers']),
+      onError: (err) => console.error(err)
+    })
+
+
   }
 
 }
