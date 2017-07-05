@@ -1,6 +1,6 @@
 <md-toolbar color="primary"></md-toolbar>
 
-<form (ngSubmit)="onSubmit($event)">
+
   <md-card>
     <md-card-content>
       <md-input-container>
@@ -10,7 +10,7 @@
         <input type="password" mdInput [(ngModel)]="password" placeholder="password" name="password">
       </md-input-container>
 
-      <button type="submit" md-raised-button>Login</button>
+      <button type="submit" md-raised-button (click)="loginAsClient()">Login as Client</button>
+      <button type="submit" md-raised-button >Login as Salesman</button>
     </md-card-content>
   </md-card>
-</form>
