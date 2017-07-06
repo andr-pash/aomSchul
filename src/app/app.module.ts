@@ -11,13 +11,15 @@ import { AppComponent } from './app.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { OfferListPageComponent } from './offer-list-page/offer-list-page.component';
 import { ClientListPageComponent } from './client-list-page/client-list-page.component';
+import { ClientProfilePageComponent } from './client-profile-page/client-profile-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginPageComponent,
     OfferListPageComponent,
-    ClientListPageComponent
+    ClientListPageComponent,
+    ClientProfilePageComponent
   ],
   imports: [
     BrowserModule,
