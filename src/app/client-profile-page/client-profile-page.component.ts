@@ -14,6 +14,9 @@ export class ClientProfilePageComponent implements OnInit {
 
   ngOnInit() {
     const client = new Apiomat.Client("Kristof", "secret")
+
+    Apiomat.Datastore.configureWithCredentials(client)
+
     client.loadMe({
       onOk: () => {
         client.loadInsuredBy({
