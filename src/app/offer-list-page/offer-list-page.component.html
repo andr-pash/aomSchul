@@ -2,8 +2,8 @@
 
 <md-card *ngFor="let insurance of listOfInsurances">
   <md-card-content>
-    <md-card-title>{{insurance.getName()}}</md-card-title>
-    <h5>Price:</h5> {{insurance.getPrice()}}
+    <md-card-title>Name: {{insurance.getName()}}</md-card-title>
+    <h3>Price: {{insurance.getPrice()}}</h3> 
     <h5>Coverage:</h5> 
     <ul>
       <li *ngFor="let item of insurance.getCoverage()">
