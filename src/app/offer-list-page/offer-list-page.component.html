@@ -1,7 +1,14 @@
 <md-toolbar color="warn"></md-toolbar>
 
-<md-card>
+<md-card *ngFor="let insurance of listOfInsurances">
   <md-card-content>
-    <md-card-title></md-card-title>
+    <md-card-title>{{insurance.getName()}}</md-card-title>
+    <h5>Price:</h5> {{insurance.getPrice()}}
+    <h5>Coverage:</h5> 
+    <ul>
+      <li *ngFor="let item of insurance.getCoverage()">
+        {{item}}
+      </li>
+    </ul>
   </md-card-content>
 </md-card>
