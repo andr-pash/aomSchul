@@ -26,6 +26,7 @@ export class LoginPageComponent implements OnInit {
 
     client.setUserName(this.username);
     client.setPassword(this.password);
+    console.log(this.password)
 
     Apiomat.Datastore.configureWithCredentials(client);
 
@@ -33,8 +34,6 @@ export class LoginPageComponent implements OnInit {
       onOk: () => this.router.navigate(['offers']),
       onError: (err) => console.error(err)
     })
-
-
   }
 
 }
