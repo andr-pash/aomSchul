@@ -1,4 +1,5 @@
 import { ClientListPageComponent } from './client-list-page/client-list-page.component';
+import { ClientProfilePageComponent } from './client-profile-page/client-profile-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { OfferListPageComponent } from './offer-list-page/offer-list-page.component';
 
@@ -24,6 +25,10 @@ const routes: Routes = [
     path: 'offers',
     component: OfferListPageComponent
   },
+  {
+    path: 'clientProfile',
+    component: ClientProfilePageComponent
+  }
 
 
 ];
